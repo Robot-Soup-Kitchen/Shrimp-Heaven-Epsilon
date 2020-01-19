@@ -2,6 +2,7 @@ package com.example.catnmouse;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,7 +23,8 @@ public class SelectCatMouseActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openPlayerActivity(isCat);
+                user.setCat(isCat);
+                openGameActivity();
             }
         });
         aSwitch.setOnClickListener(new View.OnClickListener() {
@@ -31,6 +33,9 @@ public class SelectCatMouseActivity extends AppCompatActivity {
                 isCat = !isCat;
             }
         });
-
+        public void openGameActivity() {
+            Intent intent = new Intent(this, GameActivity.class);
+            startActivity(intent);
+        }
     }
 }

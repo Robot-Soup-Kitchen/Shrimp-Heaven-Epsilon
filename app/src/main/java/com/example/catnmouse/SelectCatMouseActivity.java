@@ -23,8 +23,8 @@ public class SelectCatMouseActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-        //        user.setCat(isCat);
-        //        openGameActivity();
+                //        user.setCat(isCat);
+                openMapsActivity();
             }
         });
         aSwitch.setOnClickListener(new View.OnClickListener() {
@@ -33,10 +33,10 @@ public class SelectCatMouseActivity extends AppCompatActivity {
                 isCat = !isCat;
             }
         });
-        //public void openGameActivity()
-        //{
-        //   Intent intent = new Intent(this, GameActivity.class);
-        //   startActivity(intent);
-        //}
+    }
+    public void openMapsActivity() {
+           Intent intent = new Intent(this, MapsActivity.class);
+           startActivity(intent);
     }
 }
+
